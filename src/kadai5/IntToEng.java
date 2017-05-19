@@ -36,7 +36,7 @@ package kadai5;
 	    		input = bignum[n] +  "-" + num[a];
 	    	
 	    	}else if(n > 100){
-	    		input = "sorr no data!";
+	    		input = "sorry no data!";
 	    	}
 	    	
 	    	
