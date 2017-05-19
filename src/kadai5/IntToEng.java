@@ -18,12 +18,28 @@ package kadai5;
 
 	    // 数値を英訳する変換するメソッド
 	    static String translateEng(int n) {
-	    	int num[] = new int[]{zero,one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourtenn,fifteen,sixteen,seventeen,eighteen,nineteen};
+	    	String num[] = new String[]{"zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourtenn","fifteen","sixteen","seventeen","eighteen","nineteen"};
+	    	String bignum[] = new String[]{"zero","one","twenty","thirty","fourty","fitty","sixty","seventy","eighty","ninety","one-handred"};
+	    	String input = null;
+	    	if(n < 20){
+	    		input = num[n];
+	    		
+	    	}else if(n >= 20 && n % 10 == 0){
+	    		
+	    		n = n / 10;
+	    		
+	    		input = bignum[n];
+	    	
+	    	}else if(n >= 20 && n / 10 != 0){
+	    		int a = n % 10;
+	    		n = n / 10;
+	    		input = bignum[n] +  "-" + num[a];
+	    	
+	    	}else if(n > 100){
+	    		input = "sorr no data!";
+	    	}
 	    	
 	    	
-	    	
-	    	if(n < 20)
-	    
-	        return "a";
+	    	return input;
 	    }
 	}
